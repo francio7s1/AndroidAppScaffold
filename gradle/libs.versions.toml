@@ -15,6 +15,7 @@ lifecycleRuntimeKtx = "2.7.0"
 activityCompose = "1.9.0"
 composeBom = "2024.05.00"
 loggingInterceptor = "5.0.0-alpha.11"
+materialIconsExtendedAndroid = "1.6.7"
 moshi = "1.15.0"
 navigationCompose = "2.7.7"
 hilt = "2.50"
@@ -53,6 +54,9 @@ accompanist-permissions = { module = "com.google.accompanist:accompanist-permiss
 
 # Splash Screen
 androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
+
+# Icons
+androidx-material-icons-extended-android = { module = "androidx.compose.material:material-icons-extended-android", version.ref = "materialIconsExtendedAndroid" }
 
 # Hilt
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Scaffold</string>
+
+    // Login
+    <string name="login_username_description">Correo electrónico</string>
+    <string name="login_username_hint">ejemplo@ejemplo.com</string>
+    <string name="login_password_description">Contraseña</string>
+    <string name="login_password_hint">Introduce Contraseña</string>
+    <string name="login_button">Iniciar sesión</string>
 </resources>

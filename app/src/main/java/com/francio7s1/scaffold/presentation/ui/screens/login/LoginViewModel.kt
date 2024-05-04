@@ -64,7 +64,8 @@ class LoginViewModel @Inject constructor(
 
             Status.ERROR -> {
                 _loginState.value = loginState.value.copy(
-                    isLoading = false
+                    isLoading = false,
+                    errorMessageLoginProcess = loginUserResult.throwable?.message
                 )
             }
 
