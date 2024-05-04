@@ -16,7 +16,7 @@ import javax.inject.Inject
 class AuthRepositoryImpl @Inject constructor(
     private val authService: AuthService,
     private val prefs: SharedPreferences
-): AuthRepositoryInt{
+) : AuthRepositoryInt {
     override suspend fun loginUser(loginUserRequest: LoginUserRequest): Flow<AsyncResult<Boolean>> =
         networkBoundResource(
             query = {
@@ -24,7 +24,7 @@ class AuthRepositoryImpl @Inject constructor(
                     emit(!prefs[StoreConstants.token, ""].isNullOrEmpty())
                 }
             },
-            fetch =  {
+            fetch = {
                 authService.loginUser(
                     loginUserRequest
                 )

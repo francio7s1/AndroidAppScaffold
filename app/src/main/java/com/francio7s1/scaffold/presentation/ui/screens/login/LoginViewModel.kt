@@ -18,7 +18,7 @@ import javax.inject.Inject
 class LoginViewModel @Inject constructor(
     private val loginUserUseCase: LoginUserUseCase,
     private val validateLoginInputUseCase: ValidateLoginInputUseCase
-): ViewModel() {
+) : ViewModel() {
 
     private val _loginState = mutableStateOf(LoginState())
     val loginState: State<LoginState> = _loginState
@@ -61,11 +61,13 @@ class LoginViewModel @Inject constructor(
                     isLoading = false
                 )
             }
+
             Status.ERROR -> {
                 _loginState.value = loginState.value.copy(
                     isLoading = false
                 )
             }
+
             Status.LOADING -> {
                 _loginState.value = loginState.value.copy(
                     isLoading = true
@@ -105,19 +107,21 @@ class LoginViewModel @Inject constructor(
     }
 
     private fun processInputValidationType(type: LoginInputValidationType) {
-        when(type) {
+        when (type) {
             LoginInputValidationType.EMPTY_FIELD -> {
                 _loginState.value = loginState.value.copy(
                     errorMessageInput = "Campos vacíos",
                     isInputValid = false
                 )
             }
+
             LoginInputValidationType.NO_VALID_USERNAME -> {
                 _loginState.value = loginState.value.copy(
                     errorMessageInput = "Email no válido",
                     isInputValid = false
                 )
             }
+
             LoginInputValidationType.VALID -> {
                 _loginState.value = loginState.value.copy(
                     errorMessageInput = null,

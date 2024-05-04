@@ -12,7 +12,7 @@ class LoginUserUseCase @Inject constructor(
     suspend operator fun invoke(
         username: String,
         password: String
-    ) : Flow<AsyncResult<Boolean>> =
+    ): Flow<AsyncResult<Boolean>> =
         authRepository.loginUser(
             LoginUserRequest(
                 username = username,
